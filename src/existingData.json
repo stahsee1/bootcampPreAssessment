@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "author": "Philip K. Dick",
+        "title": "Do Androids Dream of Electric Sheep?",
+        "yearPublished": 1968
+    },
+    {
+        "id": 2,
+        "author": "William Gibson",
+        "title": "Neuromancer",
+        "yearPublished": 1984
+    }
+]
