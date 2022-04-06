@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-let books = require('./existingData.json');
+let books = [];
 
-router.post('/books', (req, res) => {
+router.post('/', (req, res) => {
     const numberOfBooks = books.length;
     let currentBook = req.body;
     currentBook.id = numberOfBooks + 1;
@@ -11,14 +11,14 @@ router.post('/books', (req, res) => {
     res.status(201).send(currentBook);
 });
 
-router.get('/books', (req, res) => {
+router.get('/', (req, res) => {
     let retBooks = {
         'books' : books.sort((a,b) => (a.title > b.title) ? 1 : -1)
     };
     res.status(200).send(retBooks);
 });
 
-router.delete('/books', (req, res) => {
+router.delete('/', (req, res) => {
     if (books.length !== 0){
         books = [];
     }

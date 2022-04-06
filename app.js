@@ -10,6 +10,6 @@ app.get("/health", (req, res) => {
   res.status(200).send("Don't panic.");
 });
 
-app.use('/api', apiRoutes);
+app.use('/api/books', apiRoutes);
 
 module.exports = app;
